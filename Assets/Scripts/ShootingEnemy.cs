@@ -1,8 +1,4 @@
-﻿using Boo.Lang.Environments;
-using System.Runtime.CompilerServices;
-using UnityEngine;
-using UnityEngine.Rendering;
-using UnityEngine.SocialPlatforms;
+﻿using UnityEngine;
 
 public class ShootingEnemy : MonoBehaviour
 {

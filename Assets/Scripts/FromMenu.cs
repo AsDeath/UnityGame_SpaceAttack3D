@@ -5,7 +5,6 @@ using UnityEngine.UI;
 public class FromMenu : MonoBehaviour
 {
     public AudioMixerGroup Mixer;
-    public Text MaxScore;
     //public static Save sv = new Save();
     //public static string path;
     public void Mute(bool enable)
@@ -29,7 +28,6 @@ public class FromMenu : MonoBehaviour
         {
             Save.MaxScore = PlayerPrefs.GetInt("Save");
         }
-        MaxScore.text = "Max Score: " + Save.MaxScore;
     }
 }
 

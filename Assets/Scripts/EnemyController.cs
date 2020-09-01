@@ -7,6 +7,7 @@ public class EnemyController : MonoBehaviour
     public int enemy_hp = 100;
     private Transform t_player;
     private Vector3 transformVector;
+    Vector3 goAway;
 
     private PublicValues val;
     Quaternion origRot;
@@ -75,8 +76,12 @@ public class EnemyController : MonoBehaviour
         if (e_collision.gameObject.tag == "Bullet3") DamageEnemy(10 + val.damage_level_player - val.defence_enemy);
         if (e_collision.gameObject.tag == "Bullet4") DamageEnemy(15 + val.damage_level_player - val.defence_enemy);
         if (e_collision.gameObject.tag == "Planet") DamageEnemy(enemy_hp + val.damage_level_player + val.defence_enemy);
+        if (e_collision.gameObject.tag == "GravityPlanet")
+        {
+            goAway = (transform.position - e_collision.transform.position).normalized;
+            transform.Translate((val.speedEnemyShip + themselfSpeed) * goAway * Time.deltaTime);
+        }
     }
-
     void DamageEnemy(int e_damage)
     {
         val.score += 1;

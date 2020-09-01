@@ -16,7 +16,8 @@ TagManager:
   - Bullet4
   - BombShip
   - Planet
-  - Parent
+  - GravityPlanet
+  - Space
   layers:
   - Default
   - TransparentFX

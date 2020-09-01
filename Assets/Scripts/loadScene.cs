@@ -22,7 +22,6 @@ public class loadScene : MonoBehaviour
 
 		while (async.isDone == false)
 		{
-			float p = async.progress * 100;
 			pRounded = Mathf.RoundToInt(async.progress * Screen.width);
 
 			yield return true;
